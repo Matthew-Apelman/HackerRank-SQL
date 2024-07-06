@@ -1,0 +1,3 @@
+Select Name+'('+LEFT(Occupation,1)+')' From Occupations Order By Name;
+
+Select 'There are a total of '+CAST(COUNT(Occupation) AS VARCHAR)+' '+Lower(Occupation)+'s.' From Occupations Group BY Occupation Order BY COUNT(Occupation);
