@@ -1,0 +1,3 @@
+select
+count (city)- count (DISTINCT CITY) as Difference
+FROM Station
