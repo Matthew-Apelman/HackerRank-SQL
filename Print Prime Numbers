@@ -1,0 +1,1 @@
+select concat( '2&', STRING_AGG(s.value, '&') ) from generate_series(3,1000,2) s where not exists ( select 1 from generate_series(3, cast(floor(sqrt(s.value)) as int) ,2) s1 where s.value % s1.value = 0 )
